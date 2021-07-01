@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(26, 26, 95);
+  font-family: "Fira Code", sans-serif;
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+header {
+  background: #292994;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.pesquisar {
+  background-color: transparent;
+  border-radius: 50px;
+  border: 2px solid rgb(197, 197, 218);
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.pesquisar::placeholder {
+  color: rgb(187, 187, 201);
+}
+.pesquisar:focus {
+  background-color: rgb(26, 26, 95);
+  outline: none;
+}
+.filme {
+  border-radius: 3px;
+  background-color: rgb(41, 41, 148);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  margin: 1rem;
+}
+.filme img {
+  width: 100%;
+}
+.filme-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 1px;
+}
+
+.filme-info h3 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.filme-info span {
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  background-color: rgb(26, 26, 88);
+}
+
+.filme-info span.verde {
+  color: green;
+}
+
+.filme-info span.laranja {
+  color: orange;
+}
+.filme-info span.vermelho {
+  color: red;
+}
+.detalhes {
+  position: absolute;
+  background-color: lavender;
+  padding: 2rem;
+  font-size: 10px;
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.filme:hover .detalhes {
+  transform: translateY(0);
+}
